@@ -14,6 +14,12 @@
     }
   },
 
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers-community/features/llvm": {},
+    "ghcr.io/devcontainers-extra/features/cmake:1": {}
+  }
+
   "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
 
   "remoteUser": "vscode"
