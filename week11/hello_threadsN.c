@@ -10,8 +10,8 @@ void *thread_hello(void *arg) {
 
     printf("hello I'm thread %d\n", myid);
 
-    for(i = 0; i < 1000000; i++) {
-        count += i;
+    for(i = 0; i < 1000; i++) {
+        count += 1;
     }
 
     printf("goodbye I'm thread %d\n", myid);
@@ -40,6 +40,7 @@ int main(int argc, char **argv) {
     for (i=0; i < ntids; i++) {
         pthread_join(tids[i], 0);
     }
+    printf("Global count at exit: %llu\n", count);
     return 0;
 }
 

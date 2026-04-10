@@ -12,6 +12,7 @@ int main() {
   pthread_join(tid[1], NULL);
   return 0;
 }
+
 void *hello(void *arg) {
   printf("Hello, world!\n"); 
   return NULL;
